@@ -5,7 +5,6 @@
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'/>
   <title>CIS Protocol - Admin Manual Book</title>
   
-  <!-- Font & Icons -->
   <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet'/>
   <link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&family=Orbitron:wght@500;700;900&display=swap' rel='stylesheet'/>
 
@@ -58,10 +57,10 @@
     /* ==================================================================
        MAIN MENU (GRID STYLE)
     ================================================================== */
-    .container { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
     .section-title { text-align: center; font-family: 'Orbitron'; color: var(--cyan); margin-bottom: 25px; font-size: 1.2rem; letter-spacing: 1px; text-transform: uppercase; }
 
-    .grid-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .grid-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
     
     .menu-card { 
       background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 25px 20px; 
@@ -79,6 +78,10 @@
     /* Specific Colors */
     .mc-1::before { background: var(--cyan); } .mc-1 .menu-icon { color: var(--cyan); }
     .mc-2::before { background: var(--gold); } .mc-2 .menu-icon { color: var(--gold); }
+    .mc-3::before { background: var(--green); } .mc-3 .menu-icon { color: var(--green); }
+    .mc-4::before { background: var(--purple); } .mc-4 .menu-icon { color: var(--purple); }
+    .mc-5::before { background: var(--red); } .mc-5 .menu-icon { color: var(--red); }
+    .mc-6::before { background: #3498db; } .mc-6 .menu-icon { color: #3498db; }
 
     /* ==================================================================
        FULLSCREEN MODAL (POPUP LAYAR)
@@ -113,145 +116,4 @@
     .modal-body p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 15px; }
     
     .highlight-box { background: linear-gradient(135deg, rgba(56,189,248,0.05), rgba(0,0,0,0)); border-left: 4px solid var(--cyan); padding: 20px; margin: 20px 0; border-radius: 0 12px 12px 0; border: 1px solid var(--border-color); }
-    
-    .step-list { list-style: none; padding: 0; margin: 20px 0; }
-    .step-list li { background: var(--panel-bg); border: 1px solid var(--border-color); margin-bottom: 10px; padding: 15px 20px; border-radius: 10px; display: flex; align-items: flex-start; gap: 15px; }
-    .step-list li .step-num { background: var(--dark-bg); color: var(--cyan); font-family: 'Orbitron'; font-weight: 900; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--cyan); flex-shrink: 0; }
-    .step-list li .step-text { color: #e2e8f0; font-size: 0.9rem; margin-top: 5px;}
-  </style>
-</head>
-
-<body>
-
-  <!-- HERO HEADER -->
-  <header class='hero'>
-    <div class='hero-content'>
-      <div class='badge-master'>RESTRICTED ACCESS ONLY</div>
-      <div class='logo-container'>
-        <i class="fa-brands fa-github"></i>
-      </div>
-      <div>
-        <h1>MANUAL BOOK ADMIN</h1>
-        <p>Buku Panduan Operasional Tim C-Panel & Master Pusat</p>
-      </div>
-    </div>
-  </header>
-
-  <!-- MAIN MENU GRID -->
-  <main class='container'>
-    <div class='section-title'>MODUL OPERASIONAL SISTEM</div>
-    <div class='grid-menu'>
-      
-      <!-- MODUL 1 -->
-      <div class='menu-card mc-1' onclick='openModal("modal-1")'>
-        <i class='fa-solid fa-code-branch menu-icon'></i>
-        <h3>1. Akses Repositori (GitHub)</h3>
-        <p>Langkah pertama mengakses brankas kode sumber aplikasi Web Publik dan Web Master CIS.</p>
-      </div>
-
-      <!-- MODUL 2 -->
-      <div class='menu-card mc-2' onclick='openModal("modal-2")'>
-        <i class='fa-solid fa-file-code menu-icon'></i>
-        <h3>2. Membuat & Menamai File</h3>
-        <p>Langkah membuat file baru dan memberikan nama ekstensi yang benar pada sistem GitHub.</p>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- ======================================================================= -->
-  <!-- KUMPULAN MODAL (POPUP LAYAR MATERI) -->
-  <!-- ======================================================================= -->
-
-  <!-- MODAL 1: Akses Repositori -->
-  <div id="modal-1" class="modal-overlay">
-    <div class="modal-header">
-      <h2><i class="fa-solid fa-code-branch" style="color:var(--cyan);"></i> 1. Akses Repositori (GitHub)</h2>
-      <button class="btn-close" onclick="closeModal('modal-1')"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="modal-body">
-      <h4>Pintu Masuk Brankas Kode</h4>
-      <p>Seluruh sistem aplikasi CIS Protocol dibangun dan disimpan di dalam platform <b>GitHub</b>. Sebelum Anda bisa melakukan *update* teks, memperbaiki *bug*, atau melakukan rilis versi terbaru, Anda harus masuk ke Repositori yang tepat.</p>
-
-      <div class="highlight-box">
-        <h3 style="color:var(--cyan); margin-top:0;"><i class="fa-solid fa-folder-tree"></i> Memilih Repository (Top Repositories)</h3>
-        <p style="margin-bottom:0;">Setelah login ke akun GitHub Mahakarya CIS, perhatikan panel menu di sebelah <b>kiri layar</b> Anda. Di sana terdapat kotak bertuliskan <b>"Top repositories"</b>.</p>
-      </div>
-
-      <h4>Langkah Pemilihan Kode:</h4>
-      <ul class="step-list">
-        <li>
-          <div class="step-num">1</div>
-          <div class="step-text"><b>Akses Dasbor Utama:</b> Pastikan Anda sudah login dan berada di halaman beranda (Home) GitHub.</div>
-        </li>
-        <li>
-          <div class="step-num">2</div>
-          <div class="step-text"><b>Pilih Modul Publik:</b> Jika Anda ingin mengedit tampilan untuk Miner (Web Penambang), klik repositori bernama <b style="color:var(--cyan);">mahakaryacis/cismining-app</b>.</div>
-        </li>
-        <li>
-          <div class="step-num">3</div>
-          <div class="step-text"><b>Pilih Modul Master:</b> Jika Anda ingin merubah sistem Admin Panel atau C-Panel, klik repositori bernama <b style="color:var(--gold);">mahakaryacis/markascis-app</b>.</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- MODAL 2: Membuat File -->
-  <div id="modal-2" class="modal-overlay">
-    <div class="modal-header">
-      <h2><i class="fa-solid fa-file-code" style="color:var(--gold);"></i> 2. Membuat & Menamai File</h2>
-      <button class="btn-close" onclick="closeModal('modal-2')"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="modal-body">
-      <h4>Mengisi Kolom "Name your file..."</h4>
-      <p>Ini adalah langkah untuk mendefinisikan halaman website Anda. Kolom "Name your file..." <b>WAJIB</b> diisi dengan nama beserta format ekstensinya agar sistem mengenali jenis kodenya sebagai halaman web.</p>
-
-      <div class="highlight-box" style="border-color:var(--gold); background:rgba(245,158,11,0.05);">
-        <h3 style="color:var(--gold); margin-top:0;"><i class="fa-brands fa-html5"></i> Format Penamaan File HTML</h3>
-        <p style="margin-bottom:0;">Jika Anda sedang memasukkan kode untuk tampilan website (seperti UI Dashboard atau Manual Book), Anda harus menggunakan akhiran ekstensi <b>.html</b> tanpa spasi.</p>
-      </div>
-
-      <h4>Panduan Pengisian:</h4>
-      <ul class="step-list">
-        <li>
-          <div class="step-num" style="color:var(--gold); border-color:var(--gold);">1</div>
-          <div class="step-text"><b>Halaman Utama:</b> Jika ini adalah halaman muka dari website tersebut, ketikkan <b>index.html</b>.</div>
-        </li>
-        <li>
-          <div class="step-num" style="color:var(--gold); border-color:var(--gold);">2</div>
-          <div class="step-text"><b>Halaman Spesifik:</b> Jika ini adalah halaman fungsi khusus (seperti panel admin), Anda bisa menamainya sesuai fungsinya, contoh: <b>admin.html</b> atau <b>dashboard.html</b>.</div>
-        </li>
-        <li>
-          <div class="step-num" style="color:var(--gold); border-color:var(--gold);">3</div>
-          <div class="step-text"><b>Isi Kode (Konten):</b> Setelah nama file dipastikan benar, letakkan kursor di kotak besar berwarna putih bertuliskan "<i>Enter file contents here</i>", lalu <b>Paste</b> (tempel) seluruh skrip kode Anda di sana.</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <script type='text/javascript'>
-    function openModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; 
-      }
-    }
-
-    function closeModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
-    }
-
-    window.onclick = function(event) {
-      if (event.target.classList.contains('modal-overlay')) {
-        event.target.style.display = "none";
-        document.body.style.overflow = "auto";
-      }
-    }
-  </script>
-</body>
-</html>
+    .warning-box { background: rgba(239, 68, 68, 0.05); border-left: 4

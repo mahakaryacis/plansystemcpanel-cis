@@ -116,4 +116,249 @@
     .modal-body p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 15px; }
     
     .highlight-box { background: linear-gradient(135deg, rgba(56,189,248,0.05), rgba(0,0,0,0)); border-left: 4px solid var(--cyan); padding: 20px; margin: 20px 0; border-radius: 0 12px 12px 0; border: 1px solid var(--border-color); }
-    .warning-box { background: rgba(239, 68, 68, 0.05); border-left: 4
+    .warning-box { background: rgba(239, 68, 68, 0.05); border-left: 4px solid var(--red); padding: 20px; margin: 20px 0; border-radius: 0 12px 12px 0; border: 1px solid var(--border-color); }
+    
+    .step-list { list-style: none; padding: 0; margin: 20px 0; }
+    .step-list li { background: var(--panel-bg); border: 1px solid var(--border-color); margin-bottom: 10px; padding: 15px 20px; border-radius: 10px; display: flex; align-items: flex-start; gap: 15px; }
+    .step-list li .step-num { background: var(--dark-bg); color: var(--cyan); font-family: 'Orbitron'; font-weight: 900; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--cyan); flex-shrink: 0; }
+    .step-list li .step-text { color: #e2e8f0; font-size: 0.9rem; margin-top: 5px;}
+  </style>
+</head>
+
+<body>
+
+  <header class='hero'>
+    <div class='hero-content'>
+      <div class='badge-master'>RESTRICTED ACCESS ONLY</div>
+      <div class='logo-container'>
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <div>
+        <h1>MANUAL BOOK ADMIN</h1>
+        <p>Buku Panduan Operasional Tim C-Panel & Master Pusat</p>
+      </div>
+    </div>
+  </header>
+
+  <main class='container'>
+    <div class='section-title'>MODUL OPERASIONAL SISTEM</div>
+    <div class='grid-menu'>
+      
+      <div class='menu-card mc-1' onclick='openModal("modal-1")'>
+        <i class='fa-solid fa-code-branch menu-icon'></i>
+        <h3>1. Akses Repositori</h3>
+        <p>Langkah masuk ke brankas kode GitHub.</p>
+      </div>
+      <div class='menu-card mc-2' onclick='openModal("modal-2")'>
+        <i class='fa-solid fa-file-code menu-icon'></i>
+        <h3>2. Manajemen File</h3>
+        <p>Aturan penamaan file .html dan penyimpanan kode.</p>
+      </div>
+
+      <div class='menu-card mc-3' onclick='openModal("modal-3")'>
+        <i class='fa-solid fa-satellite-dish menu-icon'></i>
+        <h3>3. Dasbor & Live Monitor</h3>
+        <p>Pemahaman Hak Akses (Role), pantauan Radar Miner, dan Kalkulasi Omset Global.</p>
+      </div>
+
+      <div class='menu-card mc-4' onclick='openModal("modal-4")'>
+        <i class='fa-solid fa-money-bill-transfer menu-icon'></i>
+        <h3>4. Keuangan & Pabrik Token</h3>
+        <p>Cara menyetujui WD, fitur Auto-WD, mencetak Token dari Pabrik, dan mengatur Harga Pasar.</p>
+      </div>
+
+      <div class='menu-card mc-5' onclick='openModal("modal-5")'>
+        <i class='fa-solid fa-user-lock menu-icon'></i>
+        <h3>5. Kontrol Miner (Fitur Dewa)</h3>
+        <p>Cara melacak lokasi pengguna, buka Device Lock, Edit Saldo/Speed manual, dan Master Reset.</p>
+      </div>
+
+      <div class='menu-card mc-6' onclick='openModal("modal-6")'>
+        <i class='fa-solid fa-bullhorn menu-icon'></i>
+        <h3>6. Sistem & Pengumuman</h3>
+        <p>Cara mengaktifkan Mode Perbaikan (Maintenance), Atur Countdown, dan Kirim Banner Promo.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="modal-1" class="modal-overlay">
+    <div class="modal-header">
+      <h2><i class="fa-solid fa-code-branch" style="color:var(--cyan);"></i> 1. Akses Repositori (GitHub)</h2>
+      <button class="btn-close" onclick="closeModal('modal-1')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <h4>Pintu Masuk Brankas Kode</h4>
+      <p>Seluruh sistem aplikasi CIS Protocol dibangun dan disimpan di dalam platform <b>GitHub</b>. Sebelum Anda bisa melakukan pembaruan web, Anda harus masuk ke repositori yang tepat.</p>
+      <ul class="step-list">
+        <li>
+          <div class="step-num">1</div>
+          <div class="step-text"><b>Akses Dasbor Utama:</b> Pastikan Anda login di GitHub.</div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div class="step-text"><b>Pilih Modul Publik:</b> Untuk mengubah Web Penambang, klik repositori <b style="color:var(--cyan);">mahakaryacis/cismining-app</b>.</div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div class="step-text"><b>Pilih Modul Master:</b> Untuk mengubah sistem Admin Panel, klik repositori <b style="color:var(--gold);">mahakaryacis/markascis-app</b>.</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-2" class="modal-overlay">
+    <div class="modal-header">
+      <h2><i class="fa-solid fa-file-code" style="color:var(--gold);"></i> 2. Membuat & Menamai File</h2>
+      <button class="btn-close" onclick="closeModal('modal-2')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <h4>Mengisi Kolom "Name your file..."</h4>
+      <p>Kolom "Name your file..." <b>WAJIB</b> diisi dengan nama beserta format ekstensinya agar sistem GitHub mengenalinya sebagai halaman website.</p>
+      <ul class="step-list">
+        <li>
+          <div class="step-num" style="color:var(--gold); border-color:var(--gold);">1</div>
+          <div class="step-text"><b>Halaman Utama:</b> Jika ini halaman muka (Home), ketikkan <b>index.html</b>.</div>
+        </li>
+        <li>
+          <div class="step-num" style="color:var(--gold); border-color:var(--gold);">2</div>
+          <div class="step-text"><b>Halaman Spesifik:</b> Untuk halaman khusus, Anda bisa menamainya sesuai fungsi, contoh: <b>admin.html</b>.</div>
+        </li>
+        <li>
+          <div class="step-num" style="color:var(--gold); border-color:var(--gold);">3</div>
+          <div class="step-text"><b>Isi Kode (Konten):</b> Tempel (*paste*) seluruh skrip kode ke dalam kotak besar berwarna putih.</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-3" class="modal-overlay">
+    <div class="modal-header">
+      <h2><i class="fa-solid fa-satellite-dish" style="color:var(--green);"></i> 3. Dasbor & Live Monitor</h2>
+      <button class="btn-close" onclick="closeModal('modal-3')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <h4>Hak Akses Administrator</h4>
+      <p>Aplikasi Command V2 ini dilindungi oleh Login Terenkripsi. Terdapat 2 tingkat peran Admin:</p>
+      <ul class="step-list">
+        <li><div class="step-num" style="color:var(--green); border-color:var(--green);"><i class="fa-solid fa-crown"></i></div><div class="step-text"><b>MASTER (Super Admin):</b> Memiliki akses absolut ke semua 12 Menu dan berhak melakukan <i>Factory Reset</i>.</div></li>
+        <li><div class="step-num" style="color:var(--green); border-color:var(--green);"><i class="fa-solid fa-user-tie"></i></div><div class="step-text"><b>CPANEL (Asisten):</b> Hanya bisa melihat menu-menu tertentu yang sudah diizinkan (dicentang) oleh Master di menu "Manajemen C-Panel".</div></li>
+      </ul>
+
+      <div class="highlight-box" style="border-color:var(--green); background:rgba(16, 185, 129, 0.05);">
+        <h3 style="color:var(--green); margin-top:0;"><i class="fa-solid fa-radar"></i> Membaca Live Monitor</h3>
+        <p style="margin-bottom:0;">Menu <b>Live Monitor</b> adalah radar pusat yang tersinkronisasi per detik. Di sini Anda bisa memantau siapa saja Miner yang berstatus <i>Online</i> (sedang menghidupkan mesin) vs <i>Offline</i>. Sistem juga akan otomatis mengkalkulasi beban perputaran koin (Omset Global) mulai dari hitungan Detik hingga ke beban 30 Hari ke depan.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-4" class="modal-overlay">
+    <div class="modal-header">
+      <h2><i class="fa-solid fa-money-bill-transfer" style="color:var(--purple);"></i> 4. Keuangan & Pabrik Token</h2>
+      <button class="btn-close" onclick="closeModal('modal-4')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <h4>Manajemen Ekonomi Ekosistem</h4>
+      <p>Perputaran ekonomi CIS dikontrol ketat melalui persetujuan Withdraw dan pencetakan Token.</p>
+
+      <ul class="step-list">
+        <li>
+          <div class="step-num" style="color:var(--purple); border-color:var(--purple);"><i class="fa-solid fa-industry"></i></div>
+          <div class="step-text"><b>Pabrik Token:</b> Master dapat memproduksi Token Aktivasi (REG) dan Token Speed (MINING) secara tak terbatas tanpa modal. Anda bisa mendistribusikannya ke Tim Grosir, atau mengirimkannya langsung (Injeksi) ke email 1 Pemain spesifik.</div>
+        </li>
+        <li>
+          <div class="step-num" style="color:var(--purple); border-color:var(--purple);"><i class="fa-solid fa-check-double"></i></div>
+          <div class="step-text"><b>Persetujuan WD:</b> Anda bisa menyetujui pengajuan WD satu per satu, atau mencentang banyak WD sekaligus lalu klik "Setujui Otomatis (Terpilih)". Jika Anda menolak WD, saldo Rupiah Miner akan otomatis dikembalikan (Refund).</div>
+        </li>
+        <li>
+          <div class="step-num" style="color:var(--purple); border-color:var(--purple);"><i class="fa-solid fa-robot"></i></div>
+          <div class="step-text"><b>Mode Auto WD:</b> Di menu Persetujuan WD, terdapat sakelar <i>Mode WD Otomatis</i>. Jika dihidupkan, setiap Miner yang WD tidak perlu antre; sistem langsung mencetakkan token detiknya itu juga!</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-5" class="modal-overlay">
+    <div class="modal-header">
+      <h2><i class="fa-solid fa-user-lock" style="color:var(--red);"></i> 5. Kontrol Miner (Fitur Dewa)</h2>
+      <button class="btn-close" onclick="closeModal('modal-5')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <h4>Otoritas Pengendalian Akun</h4>
+      <p>Masuk ke menu <b>Data Miner</b>. Di sini Admin memiliki kuasa absolut atas semua partisipan.</p>
+
+      <div class="highlight-box" style="border-color:var(--red); background:rgba(239, 68, 68, 0.05);">
+        <h3 style="color:var(--red); margin-top:0;"><i class="fa-solid fa-user-edit"></i> Edit Data Dewa</h3>
+        <p style="margin-bottom:0;">Klik tombol biru <b>"Edit"</b> pada tabel user. Muncul form yang mengizinkan Admin untuk secara gaib mengubah Saldo VRSC, Saldo Rupiah, masa expired, Speed Hash, hingga mengubah Password & 6-Digit PIN Transaksi milik Miner tersebut tanpa persetujuan mereka.</p>
+      </div>
+
+      <ul class="step-list">
+        <li>
+          <div class="step-num" style="color:var(--red); border-color:var(--red);"><i class="fa-solid fa-satellite-dish"></i></div>
+          <div class="step-text"><b>Lacak Perangkat (Track):</b> Klik tombol "Lacak". Sistem akan menampilkan Sistem Operasi (Android/iOS/PC), Alamat IP (Internet), Lokasi Negara/Kota, dan Provider Internet dari user tersebut.</div>
+        </li>
+        <li>
+          <div class="step-num" style="color:var(--red); border-color:var(--red);"><i class="fa-solid fa-mobile-screen"></i></div>
+          <div class="step-text"><b>Unlock Device:</b> Jika akun user nyangkut karena ganti HP (Kena Device Lock), Anda bisa mereset kuncinya dari tombol paling atas "UNLOCK DEVICE USER" atau klik "Terkunci (Reset)" di baris tabel user.</div>
+        </li>
+      </ul>
+
+      <div class="warning-box">
+        <h4 style="color:var(--red); margin-top:0; border-bottom:1px dashed var(--red);"><i class="fa-solid fa-skull-crossbones"></i> EKSEKUSI MASTER RESET</h4>
+        <p style="margin-bottom:0; color:#e2e8f0; font-size:0.85rem;">Terletak di bagian paling bawah Data Miner. Jika dieksekusi, fitur ini akan MENGHANCURKAN SELURUH DATABASE PENGGUNA. Semua saldo, transaksi, dan riwayat akan musnah, dan sistem kembali ke pengaturan pabrik (0 Hari).</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-6" class="modal-overlay">
+    <div class="modal-header">
+      <h2><i class="fa-solid fa-bullhorn" style="color:#3498db;"></i> 6. Sistem & Pengumuman</h2>
+      <button class="btn-close" onclick="closeModal('modal-6')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <h4>Mengendalikan Status Web & Event</h4>
+      <p>Menu <b>Sistem & Game</b> dan <b>Pengumuman</b> dipakai untuk berinteraksi massal dengan Miner.</p>
+
+      <ul class="step-list">
+        <li>
+          <div class="step-num" style="color:#3498db; border-color:#3498db;"><i class="fa-solid fa-gear"></i></div>
+          <div class="step-text"><b>Mode Maintenance & Hitung Mundur:</b> Jika dihidupkan, tampilan login user akan terkunci total dan digantikan oleh Animasi Perbaikan Web atau Hitung Mundur (Countdown) menuju peluncuran. Mode ini akan otomatis mati (Web terbuka lagi) saat waktu 'Target Launch' tersentuh.</div>
+        </li>
+        <li>
+          <div class="step-num" style="color:#3498db; border-color:#3498db;"><i class="fa-solid fa-gamepad"></i></div>
+          <div class="step-text"><b>Setting Reward 1 Jam:</b> Di menu Sistem & Game, Anda bisa mengubah berapa "Coin" yang dihasilkan tombol klaim setiap jamnya, termasuk mengatur <i>Happy Hour</i> (jam khusus dengan bonus ekstra).</div>
+        </li>
+        <li>
+          <div class="step-num" style="color:#3498db; border-color:#3498db;"><i class="fa-solid fa-gift"></i></div>
+          <div class="step-text"><b>Banner Event Promosi:</b> Di menu Pengumuman, Anda dapat menghidupkan Kotak Banner Promo yang akan muncul di atas tombol Claim pengguna. Anda bisa mengatur bonus koin atau bonus kecepatan langsung dari sana.</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script type='text/javascript'>
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; 
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal-overlay')) {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+  </script>
+</body>
+</html>
